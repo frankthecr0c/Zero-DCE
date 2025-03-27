@@ -42,7 +42,7 @@ def lowlight(image_path, forward_times_list, opt):
     forward_times_list.append(end_time)
 
     image_path_out = image_path.replace(opt["data"]["in_folder"], opt["data"]["out_folder"])
-    result_path = image_path
+    result_path = image_path_out
     if not os.path.exists(image_path.replace('/' + image_path.split("/")[-1], '')):
         os.makedirs(image_path.replace('/' + image_path.split("/")[-1], ''))
 
@@ -55,7 +55,7 @@ if __name__ == '__main__':
     opt = util.yaml_parser(Path(root_path, "config", "zero_dce.yaml"))
     forward_times = []
     with torch.no_grad():
-        data_folder_in = Path(root_path, opt["data"]["data_root"], opt["data"]["in_folder"])
+        data_folder_in = Path(root_path, "data", opt["data"]["in_folder"])
         file_list = os.listdir(data_folder_in)
         for file_name in file_list:
             test_list = glob.glob(Path(data_folder_in.__str__(), file_name, "*").__str__())

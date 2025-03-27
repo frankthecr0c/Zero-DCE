@@ -1,9 +1,16 @@
 data:
-  data_root: "data"   # dataset folder location
   in_folder: "test_data"
   out_folder: "result"
 
 model:
-  saved_models_root: ./snapshots
   loaded_model: "Epoch99.pth"
 
+ROS:
+  Node:
+    Name: "zero_dce_enhancer"
+    Topics:
+      enhancing_in: "img_req_enhancer"
+      enhancing_out: "img_enhanced_zeroDCE"
+
+  Image:
+    format_out: "rgb8"
