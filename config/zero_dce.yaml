@@ -1,0 +1,9 @@
+data:
+  data_root: "data"   # dataset folder location
+  in_folder: "test_data"
+  out_folder: "result"
+
+model:
+  saved_models_root: ./snapshots
+  loaded_model: "Epoch99.pth"
+

@@ -1,0 +1,10 @@
+Node:
+    Name: "zero_dce_enhancer"
+    Topics:
+        enhancing_in: "img_req_enhancer"
+        enhancing_out: "/img_enhanced"
+
+Image:
+    format: "rgb8"
+
+Debugging: "yes"
