@@ -43,8 +43,8 @@ def lowlight(image_path, forward_times_list, opt):
 
     image_path_out = image_path.replace(opt["data"]["in_folder"], opt["data"]["out_folder"])
     result_path = image_path_out
-    if not os.path.exists(image_path.replace('/' + image_path.split("/")[-1], '')):
-        os.makedirs(image_path.replace('/' + image_path.split("/")[-1], ''))
+    if not os.path.exists(result_path.replace('/' + result_path.split("/")[-1], '')):
+        os.makedirs(result_path.replace('/' + result_path.split("/")[-1], ''))
 
     torchvision.utils.save_image(enhanced_image, result_path)
 

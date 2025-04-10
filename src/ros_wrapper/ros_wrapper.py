@@ -59,6 +59,7 @@ class ZeroDceRos:
                     enhanced_np = np.transpose(enhanced_np, (1, 2, 0))
                     enhanced_np_uint8 = (enhanced_np * 255).astype(np.uint8)
                     ros_image_out = self.bridge.cv2_to_imgmsg(enhanced_np_uint8, encoding=self.img_encoding)
+                    ros_image_out.header.frame_id = "camera_fisheye1_optical_frame"
                     self.image_pub.publish(ros_image_out)
                 except CvBridgeError as e:
                     msg = "Error while trying to convert OpenCV image to ROS: {}".format(e)
