@@ -9,8 +9,8 @@ ROS:
   Node:
     Name: "zero_dce_enhancer"
     Topics:
-      enhancing_in: "/img_req_enhancer"
-      enhancing_out: "img_enhanced"
+      enhancing_in: "/img_req_enhancer/compressed"
+      enhancing_out: "/img_enhanced/compressed"
 
   Image:
     format_out: "rgb8"
