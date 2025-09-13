@@ -86,7 +86,7 @@ class ZeroDceRos:
 
 if __name__ == "__main__":
     root_path = Path(util.get_parent(os.path.abspath(__file__), levels=2))
-    config = util.yaml_parser(Path(root_path, "config", "zero_dce.yaml"))
+    config = util.yaml_parser(Path(root_path, "config", "zero_dce_enhanced.yaml"))
 
     with torch.no_grad():
         # Create handler
